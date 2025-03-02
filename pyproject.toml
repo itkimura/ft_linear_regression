@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ft_linear_regression"
+version = "0.1.0"
+description = "This project is a 42 School project focused on AI and Machine Learning. It involves a simple machine learning algorithm to predict the price of a car using a linear function trained with a gradient descent algorithm."
+authors = ["itkimura@student.hive.fi"]
+readme = "README.md"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+numpy = "^2.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
