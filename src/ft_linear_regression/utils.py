@@ -1,7 +1,11 @@
 import csv
+from typing import List
 
-def load_data(filename):
+from src.ft_linear_regression.models import CarData
+
+
+def load_data(filename) -> List[CarData]:
     with open(filename, newline='') as csvfile:
-        data = list(csv.reader(csvfile))
-    print(data)
-    return data
+        reader = csv.reader(csvfile)
+        next(reader)  # Skip the header
+        return [CarData(*map(int, row)) for row in reader]
